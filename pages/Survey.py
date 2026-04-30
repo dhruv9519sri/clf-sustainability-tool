@@ -470,7 +470,7 @@ st.success(f"Final Classification: {status}")
 # ---------------------------
 
 if st.button("Submit Survey"):
-    conn = sqlite3.connect("data_v3.db")
+    conn = sqlite3.connect("data_v4.db")
     c = conn.cursor()
 
     c.execute("""
