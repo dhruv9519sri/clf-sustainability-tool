@@ -514,8 +514,8 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     section_j_json,
     section_k_json,
     revenue_total,
-    cost_total, 
-    status
+    cost_total,
+    status   # ⚠️ THIS MUST EXIST ABOVE
 ))
 
     conn.commit()
