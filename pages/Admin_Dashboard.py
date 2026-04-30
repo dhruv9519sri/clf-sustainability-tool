@@ -12,7 +12,7 @@ if "logged_in" not in st.session_state:
     st.stop()
 
 # Load data
-conn = sqlite3.connect("data_v2.db")
+conn = sqlite3.connect("data_v3.db")
 c = conn.cursor()
 
 c.execute("""
