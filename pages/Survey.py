@@ -487,7 +487,7 @@ INSERT INTO responses (
     govt_support,
     revenue_table,
     cost_table,
-    staff_salary,
+    staff_salary_latest,
     latest_revenue,
     section_j,
     section_k,
