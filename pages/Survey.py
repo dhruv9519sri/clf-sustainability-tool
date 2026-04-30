@@ -513,8 +513,8 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     latest_revenue,
     section_j_json,
     section_k_json,
-    total_revenue,
-    total_cost,
+    revenue_total,
+    cost_total, 
     sustainability
 ))
 
