@@ -515,7 +515,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     section_k_json,
     revenue_total,
     cost_total, 
-    status
+    sustainability
 ))
 
     conn.commit()
