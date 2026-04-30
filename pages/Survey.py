@@ -474,26 +474,49 @@ if st.button("Submit Survey"):
     c = conn.cursor()
 
     c.execute("""
-    INSERT INTO responses (
-        enumerator_name, enumerator_phone,
-        district, block, clf_name, survey_date,
-        pre_support_business, pre_income_source, pre_revenue,
-        reap_support, govt_support, fd_details,
-        revenue_table, cost_table, section_h,
-        staff_salary, latest_revenue, salary_sufficient, reap_stop, business_plan_exists,
-        total_revenue, total_cost, sustainability
-    )
-    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
-    """, (
-        enumerator_name, enumerator_phone,
-        district, block, clf_name, str(survey_date),
-        pre_business, pre_income_source, pre_revenue,
-        reap_json, govt_json, fd_json,
-        revenue_json, cost_json, section_h_json,
-        staff_salary_latest, latest_revenue,
-        salary_sufficient, reap_stop, business_plan_exists,
-        revenue_total, cost_total, status
-    ))
+INSERT INTO responses (
+    enumerator_name,
+    enumerator_phone,
+    district,
+    block,
+    clf_name,
+    survey_date,
+    pre_support_business,
+    pre_revenue,
+    reap_support,
+    govt_support,
+    revenue_table,
+    cost_table,
+    staff_salary,
+    latest_revenue,
+    section_j,
+    section_k,
+    total_revenue,
+    total_cost,
+    sustainability
+)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""", (
+    enumerator_name,
+    enumerator_phone,
+    district,
+    block,
+    clf_name,
+    str(survey_date),
+    pre_business,
+    pre_revenue,
+    reap_json,
+    govt_json,
+    revenue_json,
+    cost_json,
+    staff_salary,
+    latest_revenue,
+    section_j_json,
+    section_k_json,
+    total_revenue,
+    total_cost,
+    sustainability
+))
 
     conn.commit()
 
