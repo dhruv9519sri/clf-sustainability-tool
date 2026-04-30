@@ -509,7 +509,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     govt_json,
     revenue_json,
     cost_json,
-    staff_salary,
+    staff_salary_latest,
     latest_revenue,
     section_j_json,
     section_k_json,
