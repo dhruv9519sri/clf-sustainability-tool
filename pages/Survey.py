@@ -483,7 +483,7 @@ if st.button("Submit Survey"):
         staff_salary, latest_revenue, salary_sufficient, reap_stop, business_plan_exists,
         total_revenue, total_cost, sustainability
     )
-    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
     """, (
         enumerator_name, enumerator_phone,
         district, block, clf_name, str(survey_date),
