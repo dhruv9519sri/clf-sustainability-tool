@@ -1,4 +1,5 @@
 import streamlit as st
+from database import create_database
 
 st.set_page_config(page_title="CLF Assessment", layout="wide")
 
