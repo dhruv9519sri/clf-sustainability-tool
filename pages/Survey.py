@@ -509,13 +509,13 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     govt_json,
     revenue_json,
     cost_json,
-    staff_salary_latest,
-    latest_revenue,
+    float(staff_salary_latest),   # ✅ ensure numeric
+    float(latest_revenue),
     section_j_json,
     section_k_json,
-    revenue_total,
-    cost_total,
-    status   # ⚠️ THIS MUST EXIST ABOVE
+    float(revenue_total),
+    float(cost_total),
+    str(status)                  # ✅ ensure string
 ))
 
     conn.commit()
