@@ -1,7 +1,7 @@
 import sqlite3
 
 def create_database():
-    conn = sqlite3.connect("data.db")
+    conn = sqlite3.connect("data_v2.db")
     c = conn.cursor()
 
     c.execute("""
