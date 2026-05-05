@@ -470,6 +470,48 @@ st.success(f"Final Classification: {status}")
 # ---------------------------
 
 if st.button("Submit Survey"):
+    import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+import streamlit as st
+
+def save_to_gsheet(data):
+    scope = [
+        "https://spreadsheets.google.com/feeds",
+        "https://www.googleapis.com/auth/drive"
+    ]
+
+    creds_dict = st.secrets["gcp_service_account"]
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+
+    client = gspread.authorize(creds)
+    sheet = client.open("CLF Survey Data").sheet1
+
+    sheet.append_row(data)
+
+    data = [
+    enumerator_name,
+    enumerator_phone,
+    district,
+    block,
+    clf_name,
+    str(survey_date),
+    pre_business,
+    pre_revenue,
+    reap_support,
+    govt_support,
+    revenue_json,
+    cost_json,
+    staff_salary,
+    latest_revenue,
+    section_j_json,
+    section_k_json,
+    total_revenue,
+    total_cost,
+    status
+]
+
+save_to_gsheet(data)
+
     conn = sqlite3.connect("data_v4.db")
     c = conn.cursor()
 
